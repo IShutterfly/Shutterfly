@@ -39,4 +39,10 @@ else
         users = await Http.GetJsonAsync<User[]>("Users");
     }
 
+    protected async Task ChangeUser(User user)
+    {
+        await Http.PostJsonAsync<User>("Users", user);
+    }
+
 }
+

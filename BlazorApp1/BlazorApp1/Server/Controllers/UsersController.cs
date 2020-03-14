@@ -6,6 +6,7 @@ using DataAccess;
 using DataModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorApp1.Server.Controllers
 {
@@ -30,6 +31,26 @@ namespace BlazorApp1.Server.Controllers
         {
             var users = _dbContext.Users.ToList();
             return users;
+        }
+
+        [HttpPost]
+        public User Post(User user) // Create
+        {
+            _dbContext.Users.Add(user);
+
+            _dbContext.SaveChangesAsync();
+            
+            return user;
+        }
+
+        [HttpPut]
+        public User Put(User user) // Change
+        {
+            _dbContext.Entry(user).State = EntityState.Modified;
+
+            _dbContext.SaveChangesAsync();
+
+            return user;
         }
     }
 }
