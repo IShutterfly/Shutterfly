@@ -1,0 +1,11 @@
+/BlazorApp1/BlazorApp1/Client/bin
+/BlazorApp1/BlazorApp1/Server/obj
+/BlazorApp1/BlazorApp1/Server/bin
+/BlazorApp1/BlazorApp1/Client/obj
+/BlazorApp1/BlazorApp1/Shared/bin
+/BlazorApp1/BlazorApp1/Shared/obj
+/BlazorApp1/DataAccess/bin
+/BlazorApp1/DataAccess/obj
+/BlazorApp1/DataModel/bin
+/BlazorApp1/DataModel/obj
+/BlazorApp1/.vs
